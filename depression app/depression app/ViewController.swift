@@ -39,7 +39,30 @@ class ViewController: UIViewController {
             } else {
                 let webContent:String = String(data: data!, encoding: String.Encoding.utf8)!
                 
-                print(webContent)
+                var array:[String] = webContent.components(separatedBy: "<title>")
+                array = array[1].components(separatedBy: " )")
+                let name = array[0] // GET NAME OF THE NIB
+                array.removeAll()
+                
+                array = webContent.components(separatedBy: "data-resolved-url-large=\"")
+                array = array[1].components(separatedBy: "\"")
+                let profilePicture = array[0] // GET PROFILE PICTURE OF THE NIB
+                
+                DispatchQueue.main.async {
+                    // self.myLabel.text = name
+                    self.updateImage(url: profilePicture)
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func updateImage(url:String) {
+        let url = URL(string: url)
+        
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            DispatchQueue.main.async {
+                // self.myImageView.image = UIImage(data: data!)
             }
         }
         task.resume()
