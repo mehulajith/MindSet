@@ -8,25 +8,12 @@
 
 import UIKit
 
-class SocialInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SocialInfoViewController: UIViewController {
 
     @IBOutlet weak var childName: UITextField!
     @IBOutlet weak var socialHandle: UITextField!
     
-    
-    // Setting up table view
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
-        cell.name.text = childName.text
-        cell.handle.text = "@" + socialHandle.text!
-        return cell
-    }
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +36,7 @@ class SocialInfoViewController: UIViewController, UITableViewDelegate, UITableVi
             let childName = self.childName.text?.replacingOccurrences(of: " ", with: "")
             let socialHandle = self.socialHandle.text?.replacingOccurrences(of: " ", with: "")
             queryTwitter(user: socialHandle!, name: childName!)
+            sleep(2)
             performSegue(withIdentifier: "createNibProfile", sender: self)
         }
     }
@@ -59,6 +47,7 @@ class SocialInfoViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil {
+                self.index = 0
                 DispatchQueue.main.async {
                     
                     if let errorMessage = error?.localizedDescription {
@@ -68,18 +57,17 @@ class SocialInfoViewController: UIViewController, UITableViewDelegate, UITableVi
                     }
                 }
             } else {
+                self.index = 1
                 let webContent:String = String(data: data!, encoding: String.Encoding.utf8)!
                 
                 var array:[String] = webContent.components(separatedBy: "<title>")
-                array = array[1].components(separatedBy: " )")
-                let name = array[0] // GET NAME OF THE NIB
+                array = array[1].components(separatedBy: " |")
+                let name = array[0] // GET NAME OF THE USERNAME
                 array.removeAll()
                 
                 array = webContent.components(separatedBy: "data-resolved-url-large=\"")
                 array = array[1].components(separatedBy: "\"")
                 let profilePicture = array[0] // GET PROFILE PICTURE OF THE NIB
-                
-                // GET THE NIBS TWEETS
                 
                 array = webContent.components(separatedBy: "data-aria-label-part=\"0\">")
                 array.remove(at: 0)
@@ -90,8 +78,10 @@ class SocialInfoViewController: UIViewController, UITableViewDelegate, UITableVi
                 }*/
                 
                 DispatchQueue.main.async {
-                    UserDefaults.standard.set(name, forKey: "newName")
+                    UserDefaults.standard.set(self.childName.text, forKey: "newName")
                     UserDefaults.standard.set(profilePicture, forKey: "newProfilePicture")
+                    UserDefaults.standard.set("@" + self.socialHandle.text!, forKey: "newHandle")
+                    UserDefaults.standard.set("😑", forKey: "newEmoji")
                 }
             }
         }
