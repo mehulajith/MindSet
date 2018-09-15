@@ -12,6 +12,7 @@
 		2A050934214CC2C300EFB9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A050932214CC2C300EFB9C8 /* Main.storyboard */; };
 		2A050936214CC2CB00EFB9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A050935214CC2CB00EFB9C8 /* Assets.xcassets */; };
 		2A050939214CC2CB00EFB9C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A050937214CC2CB00EFB9C8 /* LaunchScreen.storyboard */; };
+		2A050941214D8C9C00EFB9C8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A050940214D8C9C00EFB9C8 /* ListViewController.swift */; };
 		FAA38E52214D2E7800DB24A4 /* twitterLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAA38E51214D2E7800DB24A4 /* twitterLogo.jpg */; };
 		FAA38E54214D2F8400DB24A4 /* PickSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA38E53214D2F8400DB24A4 /* PickSocialViewController.swift */; };
 		FAA38E56214D46AF00DB24A4 /* SocialInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */; };
@@ -28,6 +29,7 @@
 		2A050935214CC2CB00EFB9C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A050938214CC2CB00EFB9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A05093A214CC2CB00EFB9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A050940214D8C9C00EFB9C8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FAA38E51214D2E7800DB24A4 /* twitterLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitterLogo.jpg; sourceTree = "<group>"; };
 		FAA38E53214D2F8400DB24A4 /* PickSocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickSocialViewController.swift; sourceTree = "<group>"; };
 		FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialInfoViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				2A050930214CC2C300EFB9C8 /* ViewController.swift */,
 				FAA38E5F214D7F1000DB24A4 /* MyTableViewCell.swift */,
 				2A050932214CC2C300EFB9C8 /* Main.storyboard */,
+				2A050940214D8C9C00EFB9C8 /* ListViewController.swift */,
 				FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */,
 				FAA38E53214D2F8400DB24A4 /* PickSocialViewController.swift */,
 				2A050935214CC2CB00EFB9C8 /* Assets.xcassets */,
@@ -158,6 +161,7 @@
 			files = (
 				2A050931214CC2C300EFB9C8 /* ViewController.swift in Sources */,
 				2A05092F214CC2C300EFB9C8 /* AppDelegate.swift in Sources */,
+				2A050941214D8C9C00EFB9C8 /* ListViewController.swift in Sources */,
 				FAA38E54214D2F8400DB24A4 /* PickSocialViewController.swift in Sources */,
 				FAA38E60214D7F1000DB24A4 /* MyTableViewCell.swift in Sources */,
 				FAA38E56214D46AF00DB24A4 /* SocialInfoViewController.swift in Sources */,
