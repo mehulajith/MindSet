@@ -8,18 +8,28 @@
 
 import UIKit
 
+var x = 0
+
 class PickSocialViewController: UIViewController {
     
     
     @IBOutlet weak var twitterImage: UIImageView!
+    @IBOutlet weak var fbImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        twitterImage.layer.borderWidth=1.0
+        twitterImage.layer.borderWidth = 1.0
         twitterImage.layer.masksToBounds = false
-        twitterImage.layer.borderColor = UIColor.white.cgColor;   twitterImage.layer.cornerRadius = 40
+        twitterImage.layer.borderColor = UIColor.white.cgColor;
+        twitterImage.layer.cornerRadius = 50
         twitterImage.clipsToBounds = true
+        
+        fbImage.layer.borderWidth=1.0
+        fbImage.layer.masksToBounds = false
+        fbImage.layer.borderColor = UIColor.white.cgColor;
+        fbImage.layer.cornerRadius = 50
+        fbImage.clipsToBounds = true
         
         
     }
@@ -30,7 +40,16 @@ class PickSocialViewController: UIViewController {
     }
     
     @IBAction func twitterButton(_ sender: UIButton) {
+       
+        x = 1
         
     }
-
+    
+    
+    @IBAction func fbButton(_ sender: UIButton) {
+        
+        x = 2
+        
+    }
+    
 }

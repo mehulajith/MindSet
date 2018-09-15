@@ -167,11 +167,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-lo-El8">
-                                <rect key="frame" x="147" y="293" width="80" height="80"/>
+                                <rect key="frame" x="137.5" y="240" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.28349828029778845" green="1" blue="0.87124457169040548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="bkK-vW-YZM"/>
-                                    <constraint firstAttribute="width" constant="80" id="r6h-mL-w1i"/>
+                                    <constraint firstAttribute="height" constant="100" id="x9a-WD-Kcb"/>
+                                    <constraint firstAttribute="width" constant="100" id="yyM-JZ-h30"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="85" height="85"/>
                                 <state key="normal" title="hello">
@@ -181,52 +181,117 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="40"/>
+                                        <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="twitterButton:" destination="Q11-zA-Xq1" eventType="touchUpInside" id="Idg-lE-d0u"/>
                                     <action selector="twitterButton:" destination="fvW-oA-s8R" eventType="touchUpInside" id="pRx-Ls-hZV"/>
-                                    <segue destination="RPR-8k-rhC" kind="presentation" modalTransitionStyle="crossDissolve" id="6QQ-8A-6sN"/>
+                                    <segue destination="RPR-8k-rhC" kind="presentation" identifier="infosegue" modalTransitionStyle="crossDissolve" id="6QQ-8A-6sN"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bGa-3V-kFe">
-                                <rect key="frame" x="147" y="293" width="80" height="80"/>
+                                <rect key="frame" x="137.5" y="240" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="Ltz-p1-kza"/>
-                                    <constraint firstAttribute="height" constant="80" id="MoQ-hM-gc8"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ef0-o0-uVs"/>
+                                    <constraint firstAttribute="width" constant="100" id="jve-ut-BQe"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8q-Me-ahq">
+                                <rect key="frame" x="137.5" y="400" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9Pm-hz-Iye"/>
+                                    <constraint firstAttribute="width" constant="100" id="Agu-a0-Y9U"/>
+                                </constraints>
+                                <state key="normal" title="FB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fbButton:" destination="fvW-oA-s8R" eventType="touchUpInside" id="A4N-og-Ahg"/>
+                                    <segue destination="RPR-8k-rhC" kind="presentation" modalTransitionStyle="crossDissolve" id="bSf-tV-iOr"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb1.png" translatesAutoresizingMaskIntoConstraints="NO" id="yha-XI-trC">
+                                <rect key="frame" x="137.5" y="400" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FVT-Yg-hrl"/>
+                                    <constraint firstAttribute="width" constant="100" id="kk1-jL-Gvp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose Your Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzm-bA-FuT">
+                                <rect key="frame" x="0.0" y="79" width="375" height="29"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Tb7-lo-El8" firstAttribute="centerY" secondItem="dh4-Uo-r3V" secondAttribute="centerY" id="brN-zx-OxC"/>
-                            <constraint firstItem="bGa-3V-kFe" firstAttribute="centerY" secondItem="dh4-Uo-r3V" secondAttribute="centerY" id="dQ7-g7-xd1"/>
-                            <constraint firstItem="Tb7-lo-El8" firstAttribute="centerX" secondItem="dh4-Uo-r3V" secondAttribute="centerX" id="hJv-wy-dbS"/>
-                            <constraint firstItem="bGa-3V-kFe" firstAttribute="centerX" secondItem="dh4-Uo-r3V" secondAttribute="centerX" id="ms5-6d-nWU"/>
+                            <constraint firstItem="yha-XI-trC" firstAttribute="centerX" secondItem="dh4-Uo-r3V" secondAttribute="centerX" id="1r0-ZB-cFW"/>
+                            <constraint firstItem="K8q-Me-ahq" firstAttribute="centerX" secondItem="dh4-Uo-r3V" secondAttribute="centerX" id="92O-he-cU3"/>
+                            <constraint firstItem="K8q-Me-ahq" firstAttribute="top" secondItem="E4p-an-LLE" secondAttribute="top" constant="380" id="CJf-3f-RbR"/>
+                            <constraint firstItem="yha-XI-trC" firstAttribute="top" secondItem="E4p-an-LLE" secondAttribute="top" constant="380" id="EQr-rS-ZI0"/>
+                            <constraint firstItem="Tb7-lo-El8" firstAttribute="top" secondItem="E4p-an-LLE" secondAttribute="top" constant="220" id="F8N-tf-cpH"/>
+                            <constraint firstItem="bGa-3V-kFe" firstAttribute="centerX" secondItem="dh4-Uo-r3V" secondAttribute="centerX" id="Ift-0v-tug"/>
+                            <constraint firstItem="Tb7-lo-El8" firstAttribute="centerX" secondItem="dh4-Uo-r3V" secondAttribute="centerX" id="JlE-Xa-JQL"/>
+                            <constraint firstItem="bGa-3V-kFe" firstAttribute="top" secondItem="E4p-an-LLE" secondAttribute="top" constant="220" id="aoQ-IU-cCV"/>
+                            <constraint firstItem="rzm-bA-FuT" firstAttribute="trailing" secondItem="E4p-an-LLE" secondAttribute="trailing" id="czB-vC-YOV"/>
+                            <constraint firstItem="rzm-bA-FuT" firstAttribute="leading" secondItem="E4p-an-LLE" secondAttribute="leading" id="j2F-bJ-bUX"/>
+                            <constraint firstItem="rzm-bA-FuT" firstAttribute="top" secondItem="dh4-Uo-r3V" secondAttribute="top" constant="79" id="w0c-As-Rlc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E4p-an-LLE"/>
                     </view>
                     <connections>
+                        <outlet property="fbImage" destination="yha-XI-trC" id="3j2-I3-FOM"/>
                         <outlet property="twitterImage" destination="bGa-3V-kFe" id="S8d-mD-GqB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noI-eZ-1LU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Q11-zA-Xq1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="739"/>
+            <point key="canvasLocation" x="1760.8" y="738.98050974512751"/>
         </scene>
         <!--Social Information-->
         <scene sceneID="g9T-Sa-n7l">
             <objects>
-                <viewController id="jFN-DI-MIb" sceneMemberID="viewController">
+                <viewController id="jFN-DI-MIb" customClass="SocialInfoViewController" customModule="depression_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eil-Xz-p5m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Handle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ws8-gC-OIY">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-hu-7qW">
+                                <rect key="frame" x="16" y="210" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FGS-w0-Zil"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Social Information" id="vma-YO-p8x"/>
+                    <navigationItem key="navigationItem" title="Social Information" id="vma-YO-p8x">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="VsT-Be-pUN">
+                            <connections>
+                                <segue destination="fvW-oA-s8R" kind="presentation" modalTransitionStyle="crossDissolve" id="BXj-Ll-vKa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="childName" destination="Ecy-hu-7qW" id="C6T-rl-1rL"/>
+                        <outlet property="socialHandle" destination="Ws8-gC-OIY" id="4cT-bv-17A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5au-2v-iyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -253,6 +318,7 @@
         <!--Navigation Controller-->
         <scene sceneID="dYE-dQ-YZm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Aq-2s-EOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RPR-8k-rhC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KA3-nB-Vom">
@@ -264,12 +330,16 @@
                         <segue destination="jFN-DI-MIb" kind="relationship" relationship="rootViewController" id="lFf-ke-fF3"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Aq-2s-EOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2604" y="738.98050974512751"/>
         </scene>
     </scenes>
     <resources>
+        <image name="fb1.png" width="1024" height="1024"/>
         <image name="twitterLogo.jpg" width="400" height="400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bSf-tV-iOr"/>
+        <segue reference="BXj-Ll-vKa"/>
+    </inferredMetricsTieBreakers>
 </document>
