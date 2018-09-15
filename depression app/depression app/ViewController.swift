@@ -35,10 +35,11 @@ class ViewController: UIViewController {
                     } else {
                         print("There is an error for some reason, check line 34")
                     }
-                    
                 }
             } else {
-            
+                let webContent:String = String(data: data!, encoding: String.Encoding.utf8)!
+                
+                print(webContent)
             }
         }
         task.resume()
