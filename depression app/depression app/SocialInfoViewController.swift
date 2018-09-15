@@ -72,6 +72,19 @@ class SocialInfoViewController: UIViewController {
                 array = webContent.components(separatedBy: "data-aria-label-part=\"0\">")
                 array.remove(at: 0)
                 
+                // GET MOST RECENT TWEET
+                array = webContent.components(separatedBy: "data-aria-label-part=\"0\">")
+                array.remove(at: 0)
+                
+                print(array)
+                
+                for i in 0 ... array.count-1 {
+                    let newTweet = array[i].components(separatedBy: "<")
+                    array[i] = newTweet[0]
+                }
+                
+                print(array[0])
+                
                 /*for i in 0...array.count - 1 {
                     let newTweet = array[i].components(separatedBy: "<")
                     array[i] = newTweet[0]
