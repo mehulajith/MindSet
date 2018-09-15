@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class SocialInfoViewController: UIViewController {
 
     @IBOutlet weak var childName: UITextField!
     @IBOutlet weak var socialHandle: UITextField!
+    
+    let session = URLSession.shared
+    var googleAPIKey = "AIzaSyBJwil2ZNsxAjLon0pHXaLxTkzBOFv_gL4"
+    var googleURL: URL {
+        return URL(string: "https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyBJwil2ZNsxAjLon0pHXaLxTkzBOFv_gL4")!
+    }
     
     var index = 0
     
@@ -40,7 +48,53 @@ class SocialInfoViewController: UIViewController {
             performSegue(withIdentifier: "createNibProfile", sender: self)
         }
     }
-    
+        
+    func createRequest(with text: String) {
+        // Create our request URL
+        
+       
+//
+//        var request = URLRequest(url: googleURL)
+//        request.httpMethod = "POST"
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.addValue(Bundle.main.bundleIdentifier ?? "", forHTTPHeaderField: "X-Ios-Bundle-Identifier")
+        
+            // Build our API request
+        let object: [String:Any] = [
+            "document": [
+                "type": "PLAIN_TEXT",
+                "content": text],
+            "encodingType": "UTF8"
+        ]
+        
+        Alamofire.request(googleURL, method: .post, parameters: object, encoding: JSONEncoding.default).responseJSON { json in
+            print(json)
+        }
+        
+//        let json = try? JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
+//
+////        let json = JSON(jsonDictionary: object)
+////        let jsonObject = JSONSerialization.jsonObject(with: jsonRequest, options: []) as? [String : Any]
+//
+//        // Serialize the JSON
+//
+//        guard let data = json else {
+//            // the json serialization failed
+//        }
+//
+//        request.httpBody = data
+//
+//        // Run the request on a background thread
+//        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
+//            guard let data = data else { return }
+//            print(String(data: data, encoding: .utf8)!)
+//        }
+//        DispatchQueue.global().async { self.runRequestOnBackgroundThread(request, handler: { (result) in
+//            handler(result)
+//        }) }
+//
+    }
+
     // QUERY TWITTER FOR DATA ABOUT THE NIB
     func queryTwitter(user: String, name: String) {
         let url = URL(string: "https://twitter.com/" + user)
@@ -76,14 +130,15 @@ class SocialInfoViewController: UIViewController {
                 array = webContent.components(separatedBy: "data-aria-label-part=\"0\">")
                 array.remove(at: 0)
                 
-                print(array)
-                
                 for i in 0 ... array.count-1 {
                     let newTweet = array[i].components(separatedBy: "<")
                     array[i] = newTweet[0]
                 }
                 
-                print(array[0])
+                let body = array[0]
+                
+                self.createRequest(with: body)
+                
                 
                 /*for i in 0...array.count - 1 {
                     let newTweet = array[i].components(separatedBy: "<")
