@@ -18,8 +18,9 @@ class ViewController: UIViewController {
         
     }
     
-    func search(username: String) {
-        let user = username.replacingOccurrences(of: " ", with: "")
+    @IBAction func searchUser(_ sender: UIButton) {
+        let user = twitterHandle.replacingOccurrences(of: " ", with: "")
+        queryTwitter(user: user)
     }
     
     func queryTwitter(user: String) {

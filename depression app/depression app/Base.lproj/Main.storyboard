@@ -25,18 +25,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E02-BU-Pnd">
+                                <rect key="frame" x="140" y="273" width="94" height="30"/>
+                                <state key="normal" title="Magic BUtton"/>
+                                <connections>
+                                    <action selector="searchUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8A-A1-hbl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Uw2-Mz-9pd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OTc-nN-xjF"/>
                             <constraint firstItem="Uw2-Mz-9pd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="PIY-IN-Wb0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E02-BU-Pnd" secondAttribute="bottom" constant="364" id="eYr-in-f9M"/>
+                            <constraint firstItem="E02-BU-Pnd" firstAttribute="centerX" secondItem="Uw2-Mz-9pd" secondAttribute="centerX" id="vpm-xL-p7f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="34"/>
+            <point key="canvasLocation" x="-132" y="33.733133433283363"/>
         </scene>
         <!--Your Kids-->
         <scene sceneID="psS-VH-TWG">
