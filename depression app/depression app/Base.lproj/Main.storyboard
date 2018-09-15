@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depressed Nib App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw2-Mz-9pd">
-                                <rect key="frame" x="113" y="62" width="149" height="21"/>
+                                <rect key="frame" x="113" y="106" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,6 +137,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Kids" id="ZnF-jY-P0N">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="1xm-nj-vFa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Abr-wR-ixH">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="8au-EX-zmB"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8FV-rd-TcS">
                             <connections>
                                 <segue destination="fvW-oA-s8R" kind="presentation" modalTransitionStyle="crossDissolve" id="LnG-pf-QLW"/>
