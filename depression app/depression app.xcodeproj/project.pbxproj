@@ -50,7 +50,6 @@
 		2A050922214CC2C200EFB9C8 = {
 			isa = PBXGroup;
 			children = (
-				FAA38E5F214D7F1000DB24A4 /* MyTableViewCell.swift */,
 				2A05092D214CC2C300EFB9C8 /* depression app */,
 				2A05092C214CC2C300EFB9C8 /* Products */,
 			);
@@ -69,6 +68,7 @@
 			children = (
 				2A05092E214CC2C300EFB9C8 /* AppDelegate.swift */,
 				2A050930214CC2C300EFB9C8 /* ViewController.swift */,
+				FAA38E5F214D7F1000DB24A4 /* MyTableViewCell.swift */,
 				2A050932214CC2C300EFB9C8 /* Main.storyboard */,
 				FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */,
 				FAA38E53214D2F8400DB24A4 /* PickSocialViewController.swift */,
