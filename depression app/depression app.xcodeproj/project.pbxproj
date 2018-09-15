@@ -17,6 +17,7 @@
 		FAA38E56214D46AF00DB24A4 /* SocialInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */; };
 		FAA38E58214D4FAC00DB24A4 /* facebookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA38E57214D4FAC00DB24A4 /* facebookLogo.png */; };
 		FAA38E5C214D566900DB24A4 /* fb1.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA38E5B214D566800DB24A4 /* fb1.png */; };
+		FAA38E60214D7F1000DB24A4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA38E5F214D7F1000DB24A4 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialInfoViewController.swift; sourceTree = "<group>"; };
 		FAA38E57214D4FAC00DB24A4 /* facebookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookLogo.png; sourceTree = "<group>"; };
 		FAA38E5B214D566800DB24A4 /* fb1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb1.png; sourceTree = "<group>"; };
+		FAA38E5F214D7F1000DB24A4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		2A050922214CC2C200EFB9C8 = {
 			isa = PBXGroup;
 			children = (
+				FAA38E5F214D7F1000DB24A4 /* MyTableViewCell.swift */,
 				2A05092D214CC2C300EFB9C8 /* depression app */,
 				2A05092C214CC2C300EFB9C8 /* Products */,
 			);
@@ -156,6 +159,7 @@
 				2A050931214CC2C300EFB9C8 /* ViewController.swift in Sources */,
 				2A05092F214CC2C300EFB9C8 /* AppDelegate.swift in Sources */,
 				FAA38E54214D2F8400DB24A4 /* PickSocialViewController.swift in Sources */,
+				FAA38E60214D7F1000DB24A4 /* MyTableViewCell.swift in Sources */,
 				FAA38E56214D46AF00DB24A4 /* SocialInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

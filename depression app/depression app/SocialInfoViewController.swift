@@ -8,11 +8,25 @@
 
 import UIKit
 
-class SocialInfoViewController: UIViewController {
+class SocialInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var childName: UITextField!
     @IBOutlet weak var socialHandle: UITextField!
     
+    
+    // Setting up table view
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
+        cell.name.text = childName.text
+        cell.handle.text = "@" + socialHandle.text!
+        return cell
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +49,7 @@ class SocialInfoViewController: UIViewController {
             let childName = self.childName.text?.replacingOccurrences(of: " ", with: "")
             let socialHandle = self.socialHandle.text?.replacingOccurrences(of: " ", with: "")
             queryTwitter(user: socialHandle!, name: childName!)
+            performSegue(withIdentifier: "createNibProfile", sender: self)
         }
     }
     
@@ -63,6 +78,16 @@ class SocialInfoViewController: UIViewController {
                 array = webContent.components(separatedBy: "data-resolved-url-large=\"")
                 array = array[1].components(separatedBy: "\"")
                 let profilePicture = array[0] // GET PROFILE PICTURE OF THE NIB
+                
+                // GET THE NIBS TWEETS
+                
+                array = webContent.components(separatedBy: "data-aria-label-part=\"0\">")
+                array.remove(at: 0)
+                
+                /*for i in 0...array.count - 1 {
+                    let newTweet = array[i].components(separatedBy: "<")
+                    array[i] = newTweet[0]
+                }*/
                 
                 DispatchQueue.main.async {
                     UserDefaults.standard.set(name, forKey: "newName")

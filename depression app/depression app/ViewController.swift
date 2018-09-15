@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBAction func searchUser(_ sender: UIButton) {
         let user = twitterHandle.replacingOccurrences(of: " ", with: "")
-        queryTwitter(user: user)
+        //queryTwitter(user: user)
     }
     
 //    func queryTwitter(user: String) {
