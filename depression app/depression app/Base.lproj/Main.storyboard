@@ -149,7 +149,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8FV-rd-TcS">
                             <connections>
-                                <segue destination="fvW-oA-s8R" kind="presentation" modalTransitionStyle="crossDissolve" id="LnG-pf-QLW"/>
+                                <segue destination="fvW-oA-s8R" kind="show" id="FWr-Kt-eJR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -167,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-lo-El8">
-                                <rect key="frame" x="137.5" y="240" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="284" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.28349828029778845" green="1" blue="0.87124457169040548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="x9a-WD-Kcb"/>
@@ -187,18 +187,18 @@
                                 <connections>
                                     <action selector="twitterButton:" destination="Q11-zA-Xq1" eventType="touchUpInside" id="Idg-lE-d0u"/>
                                     <action selector="twitterButton:" destination="fvW-oA-s8R" eventType="touchUpInside" id="pRx-Ls-hZV"/>
-                                    <segue destination="RPR-8k-rhC" kind="presentation" identifier="infosegue" modalTransitionStyle="crossDissolve" id="6QQ-8A-6sN"/>
+                                    <segue destination="jFN-DI-MIb" kind="show" id="PEp-5P-X1a"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bGa-3V-kFe">
-                                <rect key="frame" x="137.5" y="240" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="284" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Ef0-o0-uVs"/>
                                     <constraint firstAttribute="width" constant="100" id="jve-ut-BQe"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8q-Me-ahq">
-                                <rect key="frame" x="137.5" y="400" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="444" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9Pm-hz-Iye"/>
                                     <constraint firstAttribute="width" constant="100" id="Agu-a0-Y9U"/>
@@ -212,11 +212,11 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="fbButton:" destination="fvW-oA-s8R" eventType="touchUpInside" id="A4N-og-Ahg"/>
-                                    <segue destination="RPR-8k-rhC" kind="presentation" modalTransitionStyle="crossDissolve" id="bSf-tV-iOr"/>
+                                    <segue destination="jFN-DI-MIb" kind="show" id="m5b-XF-H9M"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb1.png" translatesAutoresizingMaskIntoConstraints="NO" id="yha-XI-trC">
-                                <rect key="frame" x="137.5" y="400" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="444" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="FVT-Yg-hrl"/>
                                     <constraint firstAttribute="width" constant="100" id="kk1-jL-Gvp"/>
@@ -255,7 +255,7 @@
             </objects>
             <point key="canvasLocation" x="1760.8" y="738.98050974512751"/>
         </scene>
-        <!--Social Information-->
+        <!--Social Info View Controller-->
         <scene sceneID="g9T-Sa-n7l">
             <objects>
                 <viewController id="jFN-DI-MIb" customClass="SocialInfoViewController" customModule="depression_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,31 +263,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Handle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ws8-gC-OIY">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Handle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ws8-gC-OIY">
                                 <rect key="frame" x="16" y="318" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-hu-7qW">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-hu-7qW">
                                 <rect key="frame" x="16" y="210" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8H-hM-qry">
+                                <rect key="frame" x="108" y="483" width="159" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="u6P-Hr-gLR"/>
+                                </constraints>
+                                <state key="normal" title="Nut"/>
+                                <connections>
+                                    <action selector="addInfo:" destination="jFN-DI-MIb" eventType="touchUpInside" id="Sjk-0X-ys9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your child" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBO-nK-cbq">
+                                <rect key="frame" x="0.0" y="77" width="375" height="29"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FGS-w0-Zil" firstAttribute="bottom" secondItem="K8H-hM-qry" secondAttribute="bottom" constant="136" id="36M-xR-4Px"/>
+                            <constraint firstItem="RBO-nK-cbq" firstAttribute="centerX" secondItem="Ecy-hu-7qW" secondAttribute="centerX" id="5jE-Fr-EIS"/>
+                            <constraint firstItem="K8H-hM-qry" firstAttribute="leading" secondItem="FGS-w0-Zil" secondAttribute="leading" constant="108" id="CtN-Hd-TrK"/>
+                            <constraint firstItem="K8H-hM-qry" firstAttribute="centerX" secondItem="Ws8-gC-OIY" secondAttribute="centerX" id="JK9-2X-S57"/>
+                            <constraint firstItem="K8H-hM-qry" firstAttribute="centerX" secondItem="eil-Xz-p5m" secondAttribute="centerX" id="Z2h-0p-SmF"/>
+                            <constraint firstItem="K8H-hM-qry" firstAttribute="centerX" secondItem="Ecy-hu-7qW" secondAttribute="centerX" id="kdV-t2-hGl"/>
+                            <constraint firstItem="RBO-nK-cbq" firstAttribute="leading" secondItem="eil-Xz-p5m" secondAttribute="leading" id="rDH-6e-kvq"/>
+                            <constraint firstItem="RBO-nK-cbq" firstAttribute="top" secondItem="FGS-w0-Zil" secondAttribute="top" constant="13" id="u7e-Me-ISS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FGS-w0-Zil"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Social Information" id="vma-YO-p8x">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="VsT-Be-pUN">
-                            <connections>
-                                <segue destination="fvW-oA-s8R" kind="presentation" modalTransitionStyle="crossDissolve" id="BXj-Ll-vKa"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="childName" destination="Ecy-hu-7qW" id="C6T-rl-1rL"/>
                         <outlet property="socialHandle" destination="Ws8-gC-OIY" id="4cT-bv-17A"/>
@@ -295,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5au-2v-iyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3543.1999999999998" y="738.98050974512751"/>
+            <point key="canvasLocation" x="2616.8000000000002" y="738.98050974512751"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lf1-YC-iL7">
@@ -315,31 +332,12 @@
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="33.733133433283363"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dYE-dQ-YZm">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Aq-2s-EOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RPR-8k-rhC" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KA3-nB-Vom">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jFN-DI-MIb" kind="relationship" relationship="rootViewController" id="lFf-ke-fF3"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="2604" y="738.98050974512751"/>
-        </scene>
     </scenes>
     <resources>
         <image name="fb1.png" width="1024" height="1024"/>
         <image name="twitterLogo.jpg" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bSf-tV-iOr"/>
-        <segue reference="BXj-Ll-vKa"/>
+        <segue reference="PEp-5P-X1a"/>
     </inferredMetricsTieBreakers>
 </document>
