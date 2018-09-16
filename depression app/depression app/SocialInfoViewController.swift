@@ -61,12 +61,22 @@ class SocialInfoViewController: UIViewController {
         ]
         
         Alamofire.request(googleURL, method: .post, parameters: object, encoding: JSONEncoding.default).responseJSON { data in
-            print(data)
-            print("BREAKER---")
+//            print(data)
             
-            let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
-            let posts = json["posts"] as? [[String: Any]] ?? []
-            print(posts)
+            if let status = data.response?.statusCode {
+                switch(status){
+                case 201:
+                    print("example success")
+                default:
+                    print("error with response status: \(status)")
+                }
+            }
+            //to get JSON return value
+            if let result = data.result.value {
+                let JSON = result as! NSDictionary
+                var jsonParsedData = JSON["documentSentiment"]! as! NSDictionary
+                print(jsonParsedData["magnitude"]!)
+            }
         }
     }
     
