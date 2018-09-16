@@ -159,9 +159,26 @@
                     <view key="view" contentMode="scaleToFill" id="BFL-bi-Nyk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOR-id-bpd" customClass="Chart" customModule="depression_app" customModuleProvider="target">
+                                <rect key="frame" x="16" y="215" width="343" height="236"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="g7X-aO-AzE"/>
+                                    <constraint firstAttribute="height" constant="236" id="sgb-Sa-H6Q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zOR-id-bpd" firstAttribute="centerX" secondItem="BFL-bi-Nyk" secondAttribute="centerX" id="7ek-jo-bu5"/>
+                            <constraint firstItem="zOR-id-bpd" firstAttribute="centerY" secondItem="BFL-bi-Nyk" secondAttribute="centerY" id="RC0-su-yaC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bof-yk-42o"/>
                     </view>
+                    <connections>
+                        <outlet property="chart" destination="zOR-id-bpd" id="cfO-Jm-yW6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXV-rs-Kg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,7 +279,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noI-eZ-1LU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Q11-zA-Xq1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1760.8" y="738.98050974512751"/>
+            <point key="canvasLocation" x="1761" y="804"/>
         </scene>
         <!--Social Info View Controller-->
         <scene sceneID="g9T-Sa-n7l">
@@ -326,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5au-2v-iyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2616.8000000000002" y="738.98050974512751"/>
+            <point key="canvasLocation" x="2649" y="804"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NyJ-9J-bSk">
