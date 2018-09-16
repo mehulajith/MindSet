@@ -82,6 +82,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "dataSegue", sender: self)
         UserDefaults.standard.set(childrenName[indexPath.row], forKey: "shortTermName")
         UserDefaults.standard.set(childrenHandle[indexPath.row], forKey: "shortTermHandle")
+    
     }
 
     /*
