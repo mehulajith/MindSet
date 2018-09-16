@@ -14,6 +14,10 @@
 		2A050939214CC2CB00EFB9C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A050937214CC2CB00EFB9C8 /* LaunchScreen.storyboard */; };
 		2A050941214D8C9C00EFB9C8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A050940214D8C9C00EFB9C8 /* ListViewController.swift */; };
 		ACC34E889BCC3EA48427F9C9 /* Pods_depression_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF56848FE14A3383A1D2100 /* Pods_depression_app.framework */; };
+		FA1F658B214DEEDE002AABC9 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F658A214DEEDE002AABC9 /* DataViewController.swift */; };
+		FA1F658D214DFC1F002AABC9 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F658C214DFC1F002AABC9 /* Chart.swift */; };
+		FA1F658F214DFC68002AABC9 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F658E214DFC68002AABC9 /* ChartSeries.swift */; };
+		FA1F6591214DFCC7002AABC9 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F6590214DFCC7002AABC9 /* ChartColors.swift */; };
 		FAA38E52214D2E7800DB24A4 /* twitterLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAA38E51214D2E7800DB24A4 /* twitterLogo.jpg */; };
 		FAA38E54214D2F8400DB24A4 /* PickSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA38E53214D2F8400DB24A4 /* PickSocialViewController.swift */; };
 		FAA38E56214D46AF00DB24A4 /* SocialInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */; };
@@ -33,6 +37,10 @@
 		2A050940214D8C9C00EFB9C8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		319CFC818BAE5280BA854EBB /* Pods-depression app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-depression app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-depression app/Pods-depression app.debug.xcconfig"; sourceTree = "<group>"; };
 		B373A961AEAA45EE11FB4510 /* Pods-depression app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-depression app.release.xcconfig"; path = "Pods/Target Support Files/Pods-depression app/Pods-depression app.release.xcconfig"; sourceTree = "<group>"; };
+		FA1F658A214DEEDE002AABC9 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		FA1F658C214DFC1F002AABC9 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		FA1F658E214DFC68002AABC9 /* ChartSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
+		FA1F6590214DFCC7002AABC9 /* ChartColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
 		FAA38E51214D2E7800DB24A4 /* twitterLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitterLogo.jpg; sourceTree = "<group>"; };
 		FAA38E53214D2F8400DB24A4 /* PickSocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickSocialViewController.swift; sourceTree = "<group>"; };
 		FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialInfoViewController.swift; sourceTree = "<group>"; };
@@ -87,10 +95,14 @@
 				2A050930214CC2C300EFB9C8 /* ViewController.swift */,
 				FAA38E5F214D7F1000DB24A4 /* MyTableViewCell.swift */,
 				2A050932214CC2C300EFB9C8 /* Main.storyboard */,
+				FA1F658A214DEEDE002AABC9 /* DataViewController.swift */,
 				2A050940214D8C9C00EFB9C8 /* ListViewController.swift */,
 				FAA38E55214D46AF00DB24A4 /* SocialInfoViewController.swift */,
 				FAA38E53214D2F8400DB24A4 /* PickSocialViewController.swift */,
 				2A050935214CC2CB00EFB9C8 /* Assets.xcassets */,
+				FA1F658C214DFC1F002AABC9 /* Chart.swift */,
+				FA1F6590214DFCC7002AABC9 /* ChartColors.swift */,
+				FA1F658E214DFC68002AABC9 /* ChartSeries.swift */,
 				2A050937214CC2CB00EFB9C8 /* LaunchScreen.storyboard */,
 				2A05093A214CC2CB00EFB9C8 /* Info.plist */,
 				FAA38E51214D2E7800DB24A4 /* twitterLogo.jpg */,
@@ -207,11 +219,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-depression app/Pods-depression app-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftChart/SwiftChart.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftChart.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,7 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1F658D214DFC1F002AABC9 /* Chart.swift in Sources */,
 				2A050931214CC2C300EFB9C8 /* ViewController.swift in Sources */,
+				FA1F658B214DEEDE002AABC9 /* DataViewController.swift in Sources */,
+				FA1F658F214DFC68002AABC9 /* ChartSeries.swift in Sources */,
+				FA1F6591214DFCC7002AABC9 /* ChartColors.swift in Sources */,
 				2A05092F214CC2C300EFB9C8 /* AppDelegate.swift in Sources */,
 				2A050941214D8C9C00EFB9C8 /* ListViewController.swift in Sources */,
 				FAA38E54214D2F8400DB24A4 /* PickSocialViewController.swift in Sources */,

@@ -145,11 +145,27 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="pRg-Kv-ugH" id="XbD-xb-4fF"/>
+                        <segue destination="5Xq-eH-GEt" kind="presentation" identifier="dataSegue" modalTransitionStyle="crossDissolve" id="GwG-Rb-7mG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fv3-Lt-sSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1760.8" y="33.733133433283363"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="4mm-k1-6Am">
+            <objects>
+                <viewController id="5Xq-eH-GEt" customClass="DataViewController" customModule="depression_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BFL-bi-Nyk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bof-yk-42o"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXV-rs-Kg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2648.8000000000002" y="33.733133433283363"/>
         </scene>
         <!--Pick Social View Controller-->
         <scene sceneID="BIn-yR-WgW">

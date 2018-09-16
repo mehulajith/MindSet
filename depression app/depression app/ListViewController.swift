@@ -7,14 +7,15 @@
 //
 
 import UIKit
+var myIndex = 0
+
+var childrenName:[String] = ["Vines Janarthanan"]
+var childrenHandle:[String] = ["@vines"]
+var childrenEmoji:[String] = ["😀"]
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    var childrenName:[String] = ["Vines Janarthanan"]
-    var childrenHandle:[String] = ["@vines"]
-    var childrenEmoji:[String] = ["😀"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,10 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "dataSegue", sender: self)
+    }
 
     /*
     // MARK: - Navigation
