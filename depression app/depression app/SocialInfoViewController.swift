@@ -14,6 +14,7 @@ class SocialInfoViewController: UIViewController {
 
     @IBOutlet weak var childName: UITextField!
     @IBOutlet weak var socialHandle: UITextField!
+    @IBOutlet weak var button: UIButton!
     
     let session = URLSession.shared
     var googleAPIKey = "AIzaSyBJwil2ZNsxAjLon0pHXaLxTkzBOFv_gL4"
@@ -31,8 +32,15 @@ class SocialInfoViewController: UIViewController {
             socialHandle.placeholder = "Enter Twitter Username"
         }
         else if x == 2 {
-            socialHandle.placeholder = "Enter Facebook Username"
+            socialHandle.placeholder = "Enter Facebook Profile Link"
         }
+        
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 7)
+        button.layer.shadowRadius = 10
+        button.layer.shadowOpacity = 0.5
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 0
     }
 
     override func didReceiveMemoryWarning() {

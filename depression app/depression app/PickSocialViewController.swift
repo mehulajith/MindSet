@@ -12,24 +12,20 @@ var x = 0
 
 class PickSocialViewController: UIViewController {
     
-    
-    @IBOutlet weak var twitterImage: UIImageView!
-    @IBOutlet weak var fbImage: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        twitterImage.layer.borderWidth = 1.0
-        twitterImage.layer.masksToBounds = false
-        twitterImage.layer.borderColor = UIColor.white.cgColor;
-        twitterImage.layer.cornerRadius = 50
-        twitterImage.clipsToBounds = true
-        
-        fbImage.layer.borderWidth=1.0
-        fbImage.layer.masksToBounds = false
-        fbImage.layer.borderColor = UIColor.white.cgColor;
-        fbImage.layer.cornerRadius = 50
-        fbImage.clipsToBounds = true
+//        twitterImage.layer.borderWidth = 1.0
+//        twitterImage.layer.masksToBounds = false
+//        twitterImage.layer.borderColor = UIColor.white.cgColor;
+//        twitterImage.layer.cornerRadius = 50
+//        twitterImage.clipsToBounds = true
+//
+//        fbImage.layer.borderWidth=1.0
+//        fbImage.layer.masksToBounds = false
+//        fbImage.layer.borderColor = UIColor.white.cgColor;
+//        fbImage.layer.cornerRadius = 50
+//        fbImage.clipsToBounds = true
         
         
     }
