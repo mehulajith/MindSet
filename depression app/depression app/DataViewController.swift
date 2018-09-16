@@ -7,12 +7,18 @@
 //
 
 import UIKit
-import SwiftCharts
+import SwiftChart
 
-class DataViewController: UIViewController {
+class DataViewController: UIViewController, ChartDelegate {
+    
+    
+    @IBOutlet weak var chart: Chart!
+    var selectedChart = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chart.delegate = self
         
         let chart = Chart(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         let data: [Double] = [0, -2, -2, 3, -3, 4, 1, 0, -1]
