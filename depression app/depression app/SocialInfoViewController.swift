@@ -20,6 +20,7 @@ class SocialInfoViewController: UIViewController {
     var googleURL: URL {
         return URL(string: "https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyBJwil2ZNsxAjLon0pHXaLxTkzBOFv_gL4")!
     }
+    var currentEmoji = "😐"
     
     var index = 0
     
@@ -50,49 +51,37 @@ class SocialInfoViewController: UIViewController {
     }
         
     func createRequest(with text: String) {
-        // Create our request URL
         
-       
-//
-//        var request = URLRequest(url: googleURL)
-//        request.httpMethod = "POST"
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.addValue(Bundle.main.bundleIdentifier ?? "", forHTTPHeaderField: "X-Ios-Bundle-Identifier")
-        
-            // Build our API request
+        // Build our API request
         let object: [String:Any] = [
             "document": [
-                "type": "PLAIN_TEXT",
-                "content": text],
+            "type": "PLAIN_TEXT",
+            "content": text],
             "encodingType": "UTF8"
         ]
         
-        Alamofire.request(googleURL, method: .post, parameters: object, encoding: JSONEncoding.default).responseJSON { json in
-            print(json)
+        Alamofire.request(googleURL, method: .post, parameters: object, encoding: JSONEncoding.default).responseJSON { data in
+            print(data)
+            print("BREAKER---")
+            
+            let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+            let posts = json["posts"] as? [[String: Any]] ?? []
+            print(posts)
         }
-        
-//        let json = try? JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
-//
-////        let json = JSON(jsonDictionary: object)
-////        let jsonObject = JSONSerialization.jsonObject(with: jsonRequest, options: []) as? [String : Any]
-//
-//        // Serialize the JSON
-//
-//        guard let data = json else {
-//            // the json serialization failed
-//        }
-//
-//        request.httpBody = data
-//
-//        // Run the request on a background thread
-//        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
-//            guard let data = data else { return }
-//            print(String(data: data, encoding: .utf8)!)
-//        }
-//        DispatchQueue.global().async { self.runRequestOnBackgroundThread(request, handler: { (result) in
-//            handler(result)
-//        }) }
-//
+    }
+    
+    func emojiSelection(score: Double) {
+        if score > 0.6 {
+            currentEmoji = "😀"
+        } else if score > 0.3 {
+            currentEmoji = "🙂"
+        } else if score < 0.3 && score > -0.3 {
+            currentEmoji = "😐"
+        } else if score > -0.6 {
+            currentEmoji = "🙁"
+        } else if score > -1.1 {
+            currentEmoji = "😨"
+        }
     }
 
     // QUERY TWITTER FOR DATA ABOUT THE NIB
@@ -112,6 +101,7 @@ class SocialInfoViewController: UIViewController {
                 }
             } else {
                 self.index = 1
+                
                 let webContent:String = String(data: data!, encoding: String.Encoding.utf8)!
                 
                 var array:[String] = webContent.components(separatedBy: "<title>")
@@ -139,6 +129,7 @@ class SocialInfoViewController: UIViewController {
                 
                 self.createRequest(with: body)
                 
+                sleep(2)
                 
                 /*for i in 0...array.count - 1 {
                     let newTweet = array[i].components(separatedBy: "<")
