@@ -88,7 +88,7 @@ class SocialInfoViewController: UIViewController {
             currentEmoji = "😀"
         } else if score > 0.3 {
             currentEmoji = "🙂"
-        } else if score < 0.3 && score > -0.3 {
+        } else if score <= 0.3 && score > -0.3 {
             currentEmoji = "😐"
         } else if score > -0.6 {
             currentEmoji = "🙁"

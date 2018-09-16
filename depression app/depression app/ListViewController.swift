@@ -80,6 +80,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         performSegue(withIdentifier: "dataSegue", sender: self)
+        UserDefaults.standard.set(childrenName[indexPath.row], forKey: "shortTermName")
+        UserDefaults.standard.set(childrenHandle[indexPath.row], forKey: "shortTermHandle")
     }
 
     /*
