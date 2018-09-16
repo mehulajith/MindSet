@@ -8,7 +8,6 @@ target 'depression app' do
   # Pods for depression app
 pod 'Alamofire', '~> 4.7'
 pod 'SwiftyJSON', '~> 4.0'
-pod 'SwiftCharts', '~> 0.6.2'
 pod 'SwiftChart'
 
 
