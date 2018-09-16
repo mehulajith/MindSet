@@ -14,6 +14,7 @@ class DataViewController: UIViewController, ChartDelegate {
     
     @IBOutlet weak var chart: Chart!
     @IBOutlet weak var childsName: UILabel!
+    @IBOutlet weak var analysis: UILabel!
     
     let session = URLSession.shared
     var googleAPIKey = "AIzaSyBJwil2ZNsxAjLon0pHXaLxTkzBOFv_gL4"
@@ -90,6 +91,29 @@ class DataViewController: UIViewController, ChartDelegate {
                 createGraph()
             }
         }
+        
+    var sum = scoreChartData.reduce(0, +)
+    var avg = sum / Double(scoreChartData.count)
+    var diag = ""
+        
+        if avg > 0.6 {
+            diag = "\u{2022} Your child continues to smile 😊"
+        }
+        else if avg > 0.3 {
+            diag = "\u{2022} You encourage your child to smile a bit more 👍\u{2022} "
+        }
+        else if avg < 0.3 && avg > -0.3 {
+            diag = "\u{2022} Your child gets more sleep 😴\u{2022} Spends less time on their phone📱"
+        }
+        else if avg > -0.6 {
+            diag = "\u{2022} Your child strives for healthier relationships ♥️\u{2022}You spend more quality time with your child 🕑"
+        }
+        else if avg > -1.1 {
+            diag = "\u{2022} Your child seek more help in order to elevate their emotional well-being 📈"
+        }
+        
+        analysis.numberOfLines = 0;
+        analysis.text = "According to the data, your child's emotional score is \(avg). We recommend that:\n \(diag)"
         
     }
     

@@ -174,32 +174,34 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMo-0S-wNT">
-                                <rect key="frame" x="100" y="152" width="175" height="40"/>
+                                <rect key="frame" x="100" y="95" width="175" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Sta-vB-A65"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYZ-tN-QLu">
-                                <rect key="frame" x="118" y="83" width="139" height="40"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyp-UO-ihS">
+                                <rect key="frame" x="16" y="493" width="343" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zOR-id-bpd" firstAttribute="centerX" secondItem="BFL-bi-Nyk" secondAttribute="centerX" id="7ek-jo-bu5"/>
-                            <constraint firstItem="zOR-id-bpd" firstAttribute="top" secondItem="XMo-0S-wNT" secondAttribute="bottom" constant="24" id="9LB-SR-NLS"/>
-                            <constraint firstItem="XMo-0S-wNT" firstAttribute="top" secondItem="mYZ-tN-QLu" secondAttribute="bottom" constant="29" id="QdP-hs-rFG"/>
                             <constraint firstItem="zOR-id-bpd" firstAttribute="centerY" secondItem="BFL-bi-Nyk" secondAttribute="centerY" id="RC0-su-yaC"/>
-                            <constraint firstItem="XMo-0S-wNT" firstAttribute="centerX" secondItem="mYZ-tN-QLu" secondAttribute="centerX" id="ZAD-rf-uU6"/>
+                            <constraint firstItem="XMo-0S-wNT" firstAttribute="top" secondItem="bof-yk-42o" secondAttribute="top" constant="75" id="Xmp-Ui-q9q"/>
                             <constraint firstItem="XMo-0S-wNT" firstAttribute="leading" secondItem="bof-yk-42o" secondAttribute="leading" constant="100" id="na3-Du-SSf"/>
                             <constraint firstItem="bof-yk-42o" firstAttribute="trailing" secondItem="XMo-0S-wNT" secondAttribute="trailing" constant="100" id="wfx-v5-Lwd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bof-yk-42o"/>
                     </view>
                     <connections>
+                        <outlet property="analysis" destination="Jyp-UO-ihS" id="w6h-Mm-Bwh"/>
                         <outlet property="chart" destination="zOR-id-bpd" id="cfO-Jm-yW6"/>
                         <outlet property="childsName" destination="XMo-0S-wNT" id="pTG-25-4XK"/>
                     </connections>
