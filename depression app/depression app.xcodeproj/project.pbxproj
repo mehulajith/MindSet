@@ -13,6 +13,7 @@
 		2A050936214CC2CB00EFB9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A050935214CC2CB00EFB9C8 /* Assets.xcassets */; };
 		2A050939214CC2CB00EFB9C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A050937214CC2CB00EFB9C8 /* LaunchScreen.storyboard */; };
 		2A050941214D8C9C00EFB9C8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A050940214D8C9C00EFB9C8 /* ListViewController.swift */; };
+		A076D3FA221B5AF269B5BBF7 /* Pods_depression_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BA0CA29ED7D43EE93C89B1 /* Pods_depression_app.framework */; };
 		FA1F658B214DEEDE002AABC9 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F658A214DEEDE002AABC9 /* DataViewController.swift */; };
 		FA1F658D214DFC1F002AABC9 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F658C214DFC1F002AABC9 /* Chart.swift */; };
 		FA1F658F214DFC68002AABC9 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F658E214DFC68002AABC9 /* ChartSeries.swift */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09BA0CA29ED7D43EE93C89B1 /* Pods_depression_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_depression_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A1D3C72F21BC381B708747 /* Pods-depression app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-depression app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-depression app/Pods-depression app.debug.xcconfig"; sourceTree = "<group>"; };
 		2A05092B214CC2C300EFB9C8 /* depression app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "depression app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A05092E214CC2C300EFB9C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A050930214CC2C300EFB9C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		2A050938214CC2CB00EFB9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A05093A214CC2CB00EFB9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A050940214D8C9C00EFB9C8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		90D0FB267BD1A1F3EF68884E /* Pods-depression app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-depression app.release.xcconfig"; path = "Pods/Target Support Files/Pods-depression app/Pods-depression app.release.xcconfig"; sourceTree = "<group>"; };
 		FA1F658A214DEEDE002AABC9 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		FA1F658C214DFC1F002AABC9 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		FA1F658E214DFC68002AABC9 /* ChartSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
@@ -51,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A076D3FA221B5AF269B5BBF7 /* Pods_depression_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18CF4228B8438B8F5EEFFC53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09BA0CA29ED7D43EE93C89B1 /* Pods_depression_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E8D1179FD06DB3E3679AB91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17A1D3C72F21BC381B708747 /* Pods-depression app.debug.xcconfig */,
+				90D0FB267BD1A1F3EF68884E /* Pods-depression app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2A050922214CC2C200EFB9C8 = {
 			isa = PBXGroup;
 			children = (
 				2A05092D214CC2C300EFB9C8 /* depression app */,
 				2A05092C214CC2C300EFB9C8 /* Products */,
+				1E8D1179FD06DB3E3679AB91 /* Pods */,
+				18CF4228B8438B8F5EEFFC53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A05093D214CC2CB00EFB9C8 /* Build configuration list for PBXNativeTarget "depression app" */;
 			buildPhases = (
+				AA7813D466377F84064C9FDF /* [CP] Check Pods Manifest.lock */,
 				2A050927214CC2C200EFB9C8 /* Sources */,
 				2A050928214CC2C200EFB9C8 /* Frameworks */,
 				2A050929214CC2C200EFB9C8 /* Resources */,
+				E6D0988A6D53B3EB37B5FFE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +191,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AA7813D466377F84064C9FDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-depression app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6D0988A6D53B3EB37B5FFE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-depression app/Pods-depression app-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftChart/SwiftChart.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftChart.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-depression app/Pods-depression app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A050927214CC2C200EFB9C8 /* Sources */ = {
@@ -322,6 +391,7 @@
 		};
 		2A05093E214CC2CB00EFB9C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17A1D3C72F21BC381B708747 /* Pods-depression app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +410,7 @@
 		};
 		2A05093F214CC2CB00EFB9C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D0FB267BD1A1F3EF68884E /* Pods-depression app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
