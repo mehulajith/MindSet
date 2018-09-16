@@ -23,6 +23,21 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        if UserDefaults.standard.string(forKey: "newName") != nil {
+            childrenName.append(UserDefaults.standard.string(forKey: "newName")!)
+            childrenEmoji.append(UserDefaults.standard.string(forKey: "newEmoji")!)
+            childrenHandle.append(UserDefaults.standard.string(forKey: "newHandle")!)
+            print(childrenEmoji)
+            print(childrenHandle)
+            print(childrenName)
+            UserDefaults.standard.removeObject(forKey: "newName")
+            UserDefaults.standard.removeObject(forKey: "newEmoji")
+            UserDefaults.standard.removeObject(forKey: "newHandle")
+            self.tableView.reloadData()
+        } else {
+            print("L")
+        }
+        
         // Do any additional setup after loading the view.
         
     }

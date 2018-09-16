@@ -76,6 +76,9 @@ class SocialInfoViewController: UIViewController {
                 let JSON = result as! NSDictionary
                 var jsonParsedData = JSON["documentSentiment"]! as! NSDictionary
                 print(jsonParsedData["magnitude"]!)
+                let docScore = jsonParsedData["magnitude"]! as! Double
+                
+                self.emojiSelection(score: docScore)
             }
         }
     }
@@ -150,7 +153,7 @@ class SocialInfoViewController: UIViewController {
                     UserDefaults.standard.set(self.childName.text, forKey: "newName")
                     UserDefaults.standard.set(profilePicture, forKey: "newProfilePicture")
                     UserDefaults.standard.set("@" + self.socialHandle.text!, forKey: "newHandle")
-                    UserDefaults.standard.set("😑", forKey: "newEmoji")
+                    UserDefaults.standard.set(self.currentEmoji, forKey: "newEmoji")
                 }
             }
         }
