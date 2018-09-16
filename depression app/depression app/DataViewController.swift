@@ -159,9 +159,11 @@ class DataViewController: UIViewController, ChartDelegate {
             if let result = data.result.value {
                 let JSON = result as! NSDictionary
                 var jsonParsedData = JSON["documentSentiment"]! as! NSDictionary
-                print(jsonParsedData["magnitude"]!)
-                let docScore = jsonParsedData["magnitude"]! as! Double
-                self.indexScore = docScore
+                print(jsonParsedData)
+                print(jsonParsedData["score"]!)
+                let docScore = jsonParsedData["score"]!
+                print(docScore)
+                self.indexScore = docScore as! Double
             }
         }
     }

@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import TextFieldEffects
 
 class SocialInfoViewController: UIViewController {
 
@@ -27,7 +28,7 @@ class SocialInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if x == 1 {
             socialHandle.placeholder = "Enter Twitter Username"
         }
@@ -42,11 +43,16 @@ class SocialInfoViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 0
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     @IBAction func addInfo(_ sender: UIButton) {
         if (childName.text != "" && socialHandle.text != "") {

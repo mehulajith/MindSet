@@ -9,8 +9,8 @@
 import UIKit
 var myIndex = 0
 
-var childrenName:[String] = ["Vines Janarthanan"]
-var childrenHandle:[String] = ["@vines"]
+var childrenName:[String] = ["Momo"]
+var childrenHandle:[String] = ["@mohamed_sudheer"]
 var childrenEmoji:[String] = ["😀"]
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
