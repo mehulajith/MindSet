@@ -31,7 +31,7 @@ class DataViewController: UIViewController, ChartDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scoreChartData = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        scoreChartData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         
         chart.delegate = self
         
@@ -100,20 +100,20 @@ class DataViewController: UIViewController, ChartDelegate {
             diag = "\u{2022} Your child continues to smile 😊"
         }
         else if avg > 0.3 {
-            diag = "\u{2022} You encourage your child to smile a bit more 👍\u{2022} "
+            diag = "\u{2022} You encourage your child to smile a bit more 👍 "
         }
         else if avg < 0.3 && avg > -0.3 {
-            diag = "\u{2022} Your child gets more sleep 😴\u{2022} Spends less time on their phone📱"
+            diag = "\u{2022} Your child gets more sleep 😴\n\u{2022} Spends less time on their phone📱"
         }
         else if avg > -0.6 {
-            diag = "\u{2022} Your child strives for healthier relationships ♥️\u{2022}You spend more quality time with your child 🕑"
+            diag = "\u{2022} Your child strives for healthier relationships ♥️\n\u{2022}You spend more quality time with your child 🕑"
         }
         else if avg > -1.1 {
             diag = "\u{2022} Your child seek more help in order to elevate their emotional well-being 📈"
         }
         
         analysis.numberOfLines = 0;
-        analysis.text = "According to the data, your child's emotional score is \(avg). We recommend that:\n \(diag)"
+        analysis.text = "According to the data, your child's emotional score is \(Float(avg)). We recommend that:\n \(diag)"
         
     }
     
