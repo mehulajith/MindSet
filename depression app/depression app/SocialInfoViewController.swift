@@ -89,8 +89,8 @@ class SocialInfoViewController: UIViewController {
             if let result = data.result.value {
                 let JSON = result as! NSDictionary
                 var jsonParsedData = JSON["documentSentiment"]! as! NSDictionary
-                print(jsonParsedData["magnitude"]!)
-                let docScore = jsonParsedData["magnitude"]! as! Double
+                print(jsonParsedData["score"]!)
+                let docScore = jsonParsedData["score"]! as! Double
                 
                 self.emojiSelection(score: docScore)
             }
